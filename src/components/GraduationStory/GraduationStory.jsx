@@ -141,6 +141,20 @@ const GraduationStory = () => {
                             "The best classroom is the one filled with passionate friends and a shared dream.
                             Here's to every memory we built together at Superior."
                         </blockquote>
+
+                        {/* Download CV Button */}
+                        <a
+                            href="/Muhammad_Numan_Saleem_associate_software_develper.pdf"
+                            download="Muhammad_Numan_Saleem_CV.pdf"
+                            className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-bold text-white text-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-95"
+                            style={{
+                                background: 'linear-gradient(135deg, #0ea5e9, #2563eb)',
+                                boxShadow: '0 8px 24px rgba(14, 165, 233, 0.35)',
+                            }}
+                        >
+                            <i className="fas fa-download text-base" />
+                            Download CV
+                        </a>
                     </div>
 
                     {/* Right: Dual Photo Showcase */}
