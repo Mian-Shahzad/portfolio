@@ -103,6 +103,7 @@ const SkillsPage = () => {
                             <h2 className="text-3xl font-bold">Graphic Design</h2>
                             <p className="text-slate-500 text-left dark:text-slate-400">
                                 Bridging the gap between engineering and art. I leverage industry-standard design tools to create compelling brands, beautiful assets, and intuitive user interfaces that capture attention.
+                                <a href="https://www.instagram.com/optimize_graphic_design?igsh=MTVyc2o2bHN1b3Bkbw==" className='text-blue-500 underline hover:text-blue-400 transition-colors duration-200' target='_blank'>take a look on it...</a>
                             </p>
                         </div>
                     </div>
