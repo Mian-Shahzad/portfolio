@@ -444,3 +444,24 @@ body {
 .social-sidebar-container .social-float-btn:nth-child(4) {
   animation-delay: 0.3s;
 }
+
+/* ── Download CV Button Animations ── */
+@keyframes cvSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cvTickDraw {
+  from {
+    stroke-dashoffset: 30;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

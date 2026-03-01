@@ -1,9 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import graduationPhoto from '../../assets/pictures/Graduation.jpg';
 import convocationPhoto from '../../assets/pictures/convocation.jpeg';
 
 const GraduationStory = () => {
     const [activePhoto, setActivePhoto] = useState(0);
+    const [dlState, setDlState] = useState('idle'); // 'idle' | 'loading' | 'done'
+    const downloadRef = useRef(null);
+
+    const handleDownload = () => {
+        if (dlState !== 'idle') return;
+        setDlState('loading');
+        // trigger real download after a short delay for UX
+        setTimeout(() => {
+            if (downloadRef.current) downloadRef.current.click();
+        }, 900);
+        // switch to done tick after ~1.8s
+        setTimeout(() => {
+            setDlState('done');
+        }, 1800);
+        // reset back to idle after ~3.6s
+        setTimeout(() => {
+            setDlState('idle');
+        }, 3600);
+    };
 
     const photos = [
         { src: graduationPhoto, caption: 'Graduation Day 🎓', sub: 'Superior University · 2023' },
@@ -142,19 +161,88 @@ const GraduationStory = () => {
                             Here's to every memory we built together at Superior."
                         </blockquote>
 
-                        {/* Download CV Button */}
+                        {/* Hidden real download anchor */}
                         <a
+                            ref={downloadRef}
                             href="/Muhammad_Numan_Saleem_associate_software_develper.pdf"
                             download="Muhammad_Numan_Saleem_CV.pdf"
-                            className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-bold text-white text-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-95"
+                            style={{ display: 'none' }}
+                            aria-hidden="true"
+                        />
+
+                        {/* Animated Download CV Button */}
+                        <button
+                            onClick={handleDownload}
+                            disabled={dlState !== 'idle'}
+                            className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-bold text-white text-sm transition-all duration-300 hover:-translate-y-1 active:scale-95 select-none overflow-hidden relative"
                             style={{
-                                background: 'linear-gradient(135deg, #0ea5e9, #2563eb)',
-                                boxShadow: '0 8px 24px rgba(14, 165, 233, 0.35)',
+                                background: dlState === 'done'
+                                    ? 'linear-gradient(135deg, #10b981, #059669)'
+                                    : 'linear-gradient(135deg, #0ea5e9, #2563eb)',
+                                boxShadow: dlState === 'done'
+                                    ? '0 8px 24px rgba(16, 185, 129, 0.4)'
+                                    : '0 8px 24px rgba(14, 165, 233, 0.35)',
+                                transition: 'background 0.5s ease, box-shadow 0.5s ease, transform 0.2s ease',
+                                minWidth: '160px',
+                                cursor: dlState !== 'idle' ? 'default' : 'pointer',
                             }}
                         >
-                            <i className="fas fa-download text-base" />
-                            Download CV
-                        </a>
+                            {/* Idle state */}
+                            <span
+                                style={{
+                                    display: 'inline-flex', alignItems: 'center', gap: '10px',
+                                    transition: 'opacity 0.3s ease, transform 0.3s ease',
+                                    opacity: dlState === 'idle' ? 1 : 0,
+                                    transform: dlState === 'idle' ? 'translateY(0)' : 'translateY(-12px)',
+                                    position: dlState === 'idle' ? 'relative' : 'absolute',
+                                    pointerEvents: 'none',
+                                }}
+                            >
+                                <i className="fas fa-download text-base" />
+                                Download CV
+                            </span>
+
+                            {/* Loading spinner */}
+                            <span
+                                style={{
+                                    display: 'inline-flex', alignItems: 'center', gap: '10px',
+                                    transition: 'opacity 0.3s ease, transform 0.3s ease',
+                                    opacity: dlState === 'loading' ? 1 : 0,
+                                    transform: dlState === 'loading' ? 'translateY(0)' : 'translateY(12px)',
+                                    position: dlState === 'loading' ? 'relative' : 'absolute',
+                                    pointerEvents: 'none',
+                                }}
+                            >
+                                <svg
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" strokeWidth="3" strokeLinecap="round"
+                                    style={{ animation: 'cvSpin 0.75s linear infinite' }}
+                                >
+                                    <circle cx="12" cy="12" r="10" strokeOpacity="0.25" />
+                                    <path d="M12 2 a10 10 0 0 1 10 10" />
+                                </svg>
+                                Downloading...
+                            </span>
+
+                            {/* Done tick */}
+                            <span
+                                style={{
+                                    display: 'inline-flex', alignItems: 'center', gap: '10px',
+                                    transition: 'opacity 0.4s ease, transform 0.4s cubic-bezier(0.34,1.56,0.64,1)',
+                                    opacity: dlState === 'done' ? 1 : 0,
+                                    transform: dlState === 'done' ? 'scale(1) translateY(0)' : 'scale(0.5) translateY(12px)',
+                                    position: dlState === 'done' ? 'relative' : 'absolute',
+                                    pointerEvents: 'none',
+                                }}
+                            >
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"
+                                    style={{ animation: dlState === 'done' ? 'cvTickDraw 0.45s ease forwards' : 'none', strokeDasharray: 30, strokeDashoffset: dlState === 'done' ? 0 : 30 }}
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                Done!
+                            </span>
+                        </button>
                     </div>
 
                     {/* Right: Dual Photo Showcase */}
