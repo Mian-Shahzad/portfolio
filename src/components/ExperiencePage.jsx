@@ -37,7 +37,7 @@ const experiences = [
         date: "June 2024 – September 2024",
         type: "primary",
         icon: "fa-code",
-        stack: ["React.js", "CSS", "Bootstrap 5", "JavaScript", "HTML5"],
+        stack: ["React.js", "CSS", "Bootstrap 5", "JavaScript", "HTML5", "Adobe Photoshop"],
         points: [
             "Built dynamic and responsive business profiles and client websites",
             "Delivered 4+ client websites with complete cross-browser compatibility",
