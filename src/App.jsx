@@ -20,6 +20,7 @@ import SkillsPage from './components/SkillsPage';
 import ExperiencePage from './components/ExperiencePage';
 import ProjectsPage from './components/ProjectsPage';
 import EducationPage from './components/EducationPage';
+import GalleryPage from './components/GalleryPage';
 import Contact from './components/Contact';
 
 // A single composition component for the Home layout
@@ -118,6 +119,7 @@ const App = () => {
             <Route path="/experience" element={<ExperiencePage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/education" element={<EducationPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
           </Routes>
         </main>
 

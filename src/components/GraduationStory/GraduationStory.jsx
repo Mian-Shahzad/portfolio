@@ -25,8 +25,8 @@ const GraduationStory = () => {
     };
 
     const photos = [
-        { src: graduationPhoto, caption: 'Graduation Day 🎓', sub: 'Superior University · 2023' },
-        { src: convocationPhoto, caption: 'Convocation Ceremony 🏛️', sub: 'Amazing Memories · 2022–2023' },
+        { src: graduationPhoto, caption: 'Graduation Day 🎓', sub: 'Superior University · 2026' },
+        { src: convocationPhoto, caption: 'Convocation Ceremony 🏛️', sub: 'Amazing Memories · 2022–2026' },
     ];
 
     const fypHighlights = [
@@ -284,6 +284,7 @@ const GraduationStory = () => {
                             {/* Photo Card */}
                             <div className="relative w-full rounded-3xl overflow-hidden glass-panel border-2 border-primary/20 p-2 transform transition-all duration-500 group-hover:rotate-1 group-hover:scale-[1.02] shadow-2xl shadow-primary/20">
                                 <img
+                                    key={activePhoto}
                                     src={photos[activePhoto].src}
                                     alt={photos[activePhoto].caption}
                                     className="w-full h-auto object-cover rounded-2xl transition-all duration-500"
