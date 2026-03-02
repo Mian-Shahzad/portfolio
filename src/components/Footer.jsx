@@ -1,6 +1,14 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
+    const location = useLocation();
+
+    // Helper to scroll smoothly if we are on the same page, or let browser handle it if not
+    const getHref = (hash) => {
+        return location.pathname === '/' ? hash : `/${hash}`;
+    };
+
     return (
         <footer className="pt-16 pb-8 border-t border-slate-200 dark:border-slate-800/50 relative z-10 bg-white/50 dark:bg-darkBg/50 backdrop-blur-md">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
@@ -18,11 +26,11 @@ const Footer = () => {
                 <div>
                     <h4 className="text-lg font-bold mb-4 text-slate-800 dark:text-slate-200">Quick Links</h4>
                     <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                        <li><a href="#about" className="hover:text-primary transition-colors interactive">About Me</a></li>
-                        <li><a href="#projects" className="hover:text-primary transition-colors interactive">Featured Work</a></li>
-                        <li><a href="#experience" className="hover:text-primary transition-colors interactive">Experience</a></li>
-                        <li><a href="#gallery" className="hover:text-primary transition-colors interactive">Gallery</a></li>
-                        <li><a href="#skills-page" className="hover:text-primary transition-colors interactive">Skills & Expertise</a></li>
+                        <li><a href={getHref('#about')} className="hover:text-primary transition-colors interactive">About Me</a></li>
+                        <li><Link to="/projects" className="hover:text-primary transition-colors interactive">Featured Work</Link></li>
+                        <li><Link to="/experience" className="hover:text-primary transition-colors interactive">Experience</Link></li>
+                        <li><Link to="/gallery" className="hover:text-primary transition-colors interactive">Gallery</Link></li>
+                        <li><Link to="/skills" className="hover:text-primary transition-colors interactive">Skills & Expertise</Link></li>
                     </ul>
                 </div>
 
@@ -63,7 +71,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 };
 
