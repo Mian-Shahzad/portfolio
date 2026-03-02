@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
-
 // Layout & UI Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -22,6 +21,7 @@ import ProjectsPage from './components/ProjectsPage';
 import EducationPage from './components/EducationPage';
 import GalleryPage from './components/GalleryPage';
 import Contact from './components/Contact';
+import { Analytics } from "@vercel/analytics/react"
 
 // A single composition component for the Home layout
 const HomePage = () => (
@@ -127,6 +127,7 @@ const App = () => {
         <Contact />
         <Footer />
         <SocialSidebar />
+        <Analytics />
       </div>
     </>
   );
