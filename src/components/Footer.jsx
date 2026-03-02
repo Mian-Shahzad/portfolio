@@ -10,7 +10,7 @@ const Footer = () => {
                         <span className="text-gradient">Numan</span>.
                     </a>
                     <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-sm">
-                        Full Stack Web Developer crafting high-performance, dynamic digital experiences. Specializing in MERN stack, UI/UX, and robust administrative solutions.
+                        Full Stack Web Developer crafting high-performance, dynamic digital experiences. Specializing in MERN stack and robust administrative solutions.
                     </p>
                 </div>
 
@@ -20,17 +20,17 @@ const Footer = () => {
                     <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
                         <li><a href="#about" className="hover:text-primary transition-colors interactive">About Me</a></li>
                         <li><a href="#projects" className="hover:text-primary transition-colors interactive">Featured Work</a></li>
-                        <li><a href="#skills-page" className="hover:text-primary transition-colors interactive text-primary">Skills & Expertise</a></li>
                         <li><a href="#experience" className="hover:text-primary transition-colors interactive">Experience</a></li>
+                        <li><a href="#gallery" className="hover:text-primary transition-colors interactive">Gallery</a></li>
+                        <li><a href="#skills-page" className="hover:text-primary transition-colors interactive">Skills & Expertise</a></li>
                     </ul>
                 </div>
 
                 {/* Services */}
                 <div>
-                    <h4 className="text-lg font-bold mb-4 text-slate-800 dark:text-slate-200">Services</h4>
+                    <h4 className="text-lg font-bold mb-4 text-slate-800 dark:text-slate-200">Skills</h4>
                     <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
                         <li>Web Development</li>
-                        <li>UI/UX Design</li>
                         <li>Graphic Design</li>
                         <li>Office Management</li>
                     </ul>
@@ -50,9 +50,6 @@ const Footer = () => {
                     <a href="https://linkedin.com/in/numan-saleem-4401b9289" target="_blank" rel="noopener noreferrer" className="interactive w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all">
                         <i className="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://wa.me/923274323300" target="_blank" rel="noopener noreferrer" className="interactive w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-green-500 hover:text-white transition-all">
-                        <i className="fab fa-whatsapp"></i>
-                    </a>
                     <a
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=numansaleem2003@gmail.com"
                         target="_blank"
@@ -60,6 +57,9 @@ const Footer = () => {
                         className="interactive w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-secondary hover:text-white transition-all"
                     >
                         <i className="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/923274323300" target="_blank" rel="noopener noreferrer" className="interactive w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-green-500 hover:text-white transition-all">
+                        <i className="fab fa-whatsapp"></i>
                     </a>
                 </div>
             </div>

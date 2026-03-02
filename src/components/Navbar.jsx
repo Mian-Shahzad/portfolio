@@ -31,7 +31,8 @@ const Navbar = ({ toggleTheme, isDark }) => {
                     <Link to="/experience" className="hover:text-primary transition-colors interactive">Experience</Link>
                     <Link to="/projects" className="hover:text-primary transition-colors interactive">Projects</Link>
                     <Link to="/education" className="hover:text-primary transition-colors interactive">Education</Link>
-                    <Link to="/skills" className="hover:text-primary transition-colors interactive text-primary font-bold">Skills & Services</Link>
+                    <Link to="/skills" className="hover:text-primary transition-colors interactive ">Skills & Services</Link>
+                    <Link to="/gallery" className="hover:text-primary transition-colors interactive">Gallery</Link>
                 </div>
 
                 <div className="flex items-center gap-4">
@@ -63,7 +64,8 @@ const Navbar = ({ toggleTheme, isDark }) => {
                     <Link to="/experience" onClick={closeMenu} className="w-full text-center py-3 hover:bg-primary/10 hover:text-primary transition-colors">Experience</Link>
                     <Link to="/projects" onClick={closeMenu} className="w-full text-center py-3 hover:bg-primary/10 hover:text-primary transition-colors">Projects</Link>
                     <Link to="/education" onClick={closeMenu} className="w-full text-center py-3 hover:bg-primary/10 hover:text-primary transition-colors">Education</Link>
-                    <Link to="/skills" onClick={closeMenu} className="w-full text-center py-3 hover:bg-primary/10 hover:text-primary transition-colors text-primary font-bold">Skills & Services</Link>
+                    <Link to="/skills" onClick={closeMenu} className="w-full text-center py-3 hover:bg-primary/10 hover:text-primary transition-colors">Skills & Services</Link>
+                    <Link to="/gallery" className="w-full text-center py-3 hover:bg-primary/10 hover:text-primary transition-colors">Gallery</Link>
                 </div>
             )}
         </nav>
