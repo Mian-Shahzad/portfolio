@@ -52,7 +52,7 @@ const App = () => {
     // Helper to finish loading sequence safely
     const completeLoading = () => {
       document.body.style.overflow = 'auto';
-      document.body.style.overflowX = 'hidden';
+      document.body.style.overflowX = 'clip';
       setIsLoading(false);
 
       // Initialize AOS safely after content is visible

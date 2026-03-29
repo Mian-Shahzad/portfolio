@@ -1,0 +1,75 @@
+/* ProjectsPage Custom CSS and Media Queries */
+
+/* Base Styles */
+.projects-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.projects-canvas-container {
+    width: 100%;
+    background-color: #020617;
+}
+
+.projects-mobile-container {
+    display: none;
+}
+
+/* --- Media Queries --- */
+
+/* 1. Mobile view (Phones) */
+@media screen and (max-width: 767px) {
+    .projects-canvas-container {
+        display: none !important;
+    }
+
+    .projects-mobile-container {
+        display: block !important;
+    }
+
+    .project-mobile-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* 2. Tablets (iPads, larger phones in landscape) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .projects-canvas-container {
+        display: block !important;
+    }
+
+    .projects-mobile-container {
+        display: none !important;
+    }
+
+    /* Adjusting tablet elements */
+    .project-3d-title {
+        font-size: 4rem !important;
+    }
+
+    .project-3d-desc {
+        font-size: 1rem !important;
+        max-width: 480px !important;
+    }
+}
+
+/* 3. Laptops and Desktops */
+@media screen and (min-width: 1024px) {
+    .projects-canvas-container {
+        display: block !important;
+    }
+
+    .projects-mobile-container {
+        display: none !important;
+    }
+
+    /* Adjusting laptop/desktop elements */
+    .project-3d-title {
+        font-size: 5.5rem !important;
+    }
+
+    .project-3d-desc {
+        font-size: 1.125rem !important;
+    }
+}
