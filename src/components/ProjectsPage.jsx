@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Html, Stars, Float } from '@react-three/drei';
 import * as THREE from 'three';
+import './ProjectsPage.css';
 
 const myProjects = [
     {
@@ -259,53 +260,106 @@ const ProjectsPage = () => {
     });
 
     return (
-        <main ref={container} className="relative z-10 w-full bg-[#020617]" style={{ height: `${myProjects.length * 100 + 100}vh` }}>
-            <div className="sticky top-0 w-full h-screen overflow-hidden">
-                {/* Header overlay */}
-                <div className="absolute top-28 left-0 w-full text-center z-10 pointer-events-none px-6">
-                    <motion.h1
-                        initial={{ opacity: 0, y: -20, scale: 0.9 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="text-5xl md:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]"
-                    >
-                        Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary filter drop-shadow-[0_0_10px_rgba(56,189,248,0.8)]">Journey</span>
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                        className="text-lg text-slate-300 max-w-2xl mx-auto drop-shadow-md"
-                    >
-                        Scroll down to travel through a dimension of my finest creations.
-                    </motion.p>
-                </div>
-
-                {/* 3D Scene */}
-                <div className="absolute inset-0 z-0">
-                    <Canvas camera={{ position: [0, 0, 5], fov: 60 }} gl={{ antialias: true }}>
-                        <Scene scrollProgress={scrollYProgress} />
-                    </Canvas>
-                </div>
-
-                {/* Scroll Indicator */}
-                <motion.div
-                    initial={{ opacity: 1 }}
-                    style={{ opacity: useTransform(scrollYProgress, [0, 0.05], [1, 0]) }}
-                    className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white/80 text-sm animate-bounce text-center pointer-events-none z-10 flex flex-col items-center gap-2"
-                >
-                    <i className="fas fa-chevron-down text-3xl drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]"></i>
-                    <span className="tracking-[0.3em] uppercase text-[10px] font-bold">Scroll</span>
-                </motion.div>
-
-                {/* Progress bar overlay indicator */}
-                <div className="absolute right-6 top-1/2 transform -translate-y-1/2 h-1/2 w-1 bg-white/10 rounded-full z-10 pointer-events-none hidden md:block">
-                    <div className="relative w-full h-full overflow-hidden rounded-full">
-                        <motion.div
-                            className="absolute top-0 left-0 w-full bg-primary shadow-[0_0_10px_rgba(56,189,248,0.8)]"
-                            style={{ height: useTransform(scrollYProgress, [0, 1], ["0%", "100%"]) }}
-                        />
+        <main className="projects-wrapper dark:bg-[#020617]">
+            {/* Desktop View with 3D Canvas */}
+            <div ref={container} className="projects-canvas-container h-[600vh]" style={{ height: `${myProjects.length * 100 + 100}vh` }}>
+                <div className="sticky top-0 w-full h-screen overflow-hidden">
+                    {/* Header overlay */}
+                    <div className="absolute top-28 left-0 w-full text-center z-10 pointer-events-none px-6">
+                        <motion.h1
+                            initial={{ opacity: 0, y: -20, scale: 0.9 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className="project-3d-title font-extrabold leading-tight mb-4 text-white drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]"
+                        >
+                            Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary filter drop-shadow-[0_0_10px_rgba(56,189,248,0.8)]">Journey</span>
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 0.5 }}
+                            className="project-3d-desc text-slate-300 max-w-2xl mx-auto drop-shadow-md"
+                        >
+                            Scroll down to travel through a dimension of my finest creations.
+                        </motion.p>
                     </div>
+
+                    {/* 3D Scene */}
+                    <div className="absolute inset-0 z-0">
+                        <Canvas camera={{ position: [0, 0, 5], fov: 60 }} gl={{ antialias: true }}>
+                            <Scene scrollProgress={scrollYProgress} />
+                        </Canvas>
+                    </div>
+
+                    {/* Scroll Indicator */}
+                    <motion.div
+                        initial={{ opacity: 1 }}
+                        style={{ opacity: useTransform(scrollYProgress, [0, 0.05], [1, 0]) }}
+                        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white/80 text-sm animate-bounce text-center pointer-events-none z-10 flex flex-col items-center gap-2"
+                    >
+                        <i className="fas fa-chevron-down text-3xl drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]"></i>
+                        <span className="tracking-[0.3em] uppercase text-[10px] font-bold">Scroll</span>
+                    </motion.div>
+
+                    {/* Progress bar overlay indicator */}
+                    <div className="absolute right-6 top-1/2 transform -translate-y-1/2 h-1/2 w-1 bg-white/10 rounded-full z-10 pointer-events-none hidden md:block">
+                        <div className="relative w-full h-full overflow-hidden rounded-full">
+                            <motion.div
+                                className="absolute top-0 left-0 w-full bg-primary shadow-[0_0_10px_rgba(56,189,248,0.8)]"
+                                style={{ height: useTransform(scrollYProgress, [0, 1], ["0%", "100%"]) }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile Fallback View */}
+            <div className="projects-mobile-container pt-32 pb-24 px-6 min-h-screen">
+                <header className="text-center mb-16" data-aos="fade-down">
+                    <h1 className="project-mobile-title font-extrabold leading-tight mb-4 text-slate-900 dark:text-white">
+                        Project <span className="text-gradient">Journey</span>
+                    </h1>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">
+                        Scroll down to travel through my finest creations.
+                    </p>
+                </header>
+                <div className="space-y-8 flex flex-col items-center">
+                    {myProjects.map((project, index) => (
+                        <div key={project.id} data-aos="fade-up" className="glass-panel w-full max-w-sm p-6 rounded-3xl relative overflow-hidden group shadow-lg hover:shadow-primary/20 transition-all border border-slate-200 dark:border-white/10">
+                            <div className="flex justify-between items-start mb-4 relative z-10">
+                                <div className={`px-2 py-1 text-[10px] font-bold rounded-full ${project.type === 'primary' ? 'bg-primary/20 text-primary border border-primary/30' : 'bg-secondary/20 text-secondary border border-secondary/30'}`}>
+                                    <i className="fas fa-code-branch mr-1"></i>
+                                    {project.tag}
+                                </div>
+                                <span className="text-[10px] font-semibold tracking-wider text-slate-600 dark:text-slate-300 bg-slate-200 dark:bg-black/30 px-2 py-1 rounded-full">{project.year}</span>
+                            </div>
+
+                            <h3 className="text-2xl font-extrabold mb-3 text-slate-800 dark:text-white">
+                                {project.title}
+                            </h3>
+
+                            <p className="text-slate-600 dark:text-slate-300 mb-6 text-sm leading-relaxed">
+                                {project.desc}
+                            </p>
+
+                            <div className="flex flex-wrap gap-2 mb-8 relative z-10">
+                                {project.tech.map((t, i) => (
+                                    <span key={i} className="text-[10px] font-semibold px-2 py-1 rounded bg-slate-100 dark:bg-black/40 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600/50">
+                                        {t}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="flex gap-4 pt-4 border-t border-slate-200 dark:border-slate-600/50 relative z-10 justify-start">
+                                <a href={project.github} className="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors font-semibold text-xs flex items-center gap-1">
+                                    <i className="fab fa-github text-lg"></i> Source
+                                </a>
+                                <a href={project.link} className="text-slate-600 dark:text-slate-300 hover:text-secondary transition-colors font-semibold text-xs flex items-center gap-1">
+                                    <i className="fas fa-external-link-alt text-base"></i> Live
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </main>

@@ -9,7 +9,11 @@ const Experience = () => {
                     <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
                 </div>
 
-                <div className="relative border-l-2 border-primary/30 ml-3 md:ml-0 md:left-1/2 md:-translate-x-1/2 space-y-12">
+                <div className="relative space-y-12 ml-3 md:ml-0">
+                    {/* Centered Timeline Line for Desktop */}
+                    <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[2px] bg-primary/30 transform -translate-x-1/2"></div>
+                    {/* Left Timeline Line for Mobile */}
+                    <div className="md:hidden absolute top-0 bottom-0 left-0 w-[2px] bg-primary/30 transform -translate-x-1/2"></div>
 
                     {/* Item 1 */}
                     <div className="relative pl-8 md:pl-0 w-full md:w-1/2 md:pr-12 md:text-right" data-aos="fade-right">

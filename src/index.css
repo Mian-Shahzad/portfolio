@@ -1,9 +1,12 @@
-/* Base Styles & Typography */
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 body {
   font-size: 110%;
   /* Increase global font size slightly */
   font-family: 'Outfit', sans-serif;
-  overflow-x: hidden;
   cursor: none;
   /* Hide default cursor for custom cursor */
 }
@@ -102,17 +105,35 @@ body {
   border-color: #a855f7;
 }
 
+@media (max-width: 768px) {
+
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+
+  body,
+  .torch-text,
+  a,
+  button,
+  .interactive {
+    cursor: auto !important;
+  }
+}
+
 /* Glassmorphism Classes */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .dark .glass-panel {
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
 }
 
 .glass-nav {
@@ -307,6 +328,12 @@ body {
   flex-direction: column;
   gap: 15px;
   align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .social-sidebar-container {
+    display: none !important;
+  }
 }
 
 /* Animated Heading for Social Links */

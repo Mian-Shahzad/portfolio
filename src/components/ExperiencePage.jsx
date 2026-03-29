@@ -124,7 +124,7 @@ const ExperiencePage = () => {
                                         {exp.stack.map((tech, idx) => (
                                             <span
                                                 key={idx}
-                                                className={`px-3 py-1.5 text-xs font-bold rounded-full border border-white/10 glass-panel cursor-default transition-all duration-300 hover:-translate-y-1 ${exp.type === 'primary'
+                                                className={`px-3 py-1.5 text-xs font-bold rounded-full border border-slate-200 dark:border-white/10 glass-panel cursor-default transition-all duration-300 hover:-translate-y-1 ${exp.type === 'primary'
                                                     ? 'hover:shadow-[0_0_15px_rgba(14,165,233,0.5)] hover:border-primary/50 text-slate-700 dark:text-slate-200 hover:text-primary'
                                                     : 'hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:border-secondary/50 text-slate-700 dark:text-slate-200 hover:text-secondary'
                                                     }`}
