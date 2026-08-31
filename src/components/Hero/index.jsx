@@ -27,7 +27,7 @@ const Hero = () => {
                 <div className="relative z-10 flex justify-center hero-visual group" data-aos="zoom-in" data-aos-delay="300">
                     <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden glass-panel border-2 border-primary/20 p-2 transform transition-transform duration-500 group-hover:rotate-2">
                         {/* Ensure image path matches public folder or src/assets */}
-                        <img src="/1769508726921.jpeg" alt="Faryad Ali" className="w-full h-full object-cover rounded-xl shadow-2xl" />
+                        <img src="/faryad-ali.png" alt="Faryad Ali" className="w-full h-full object-cover rounded-xl shadow-2xl" />
                         {/* Overlay Accent */}
                         <div className="absolute inset-0 bg-gradient-to-t from-darkBg/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                             <span className="text-white text-sm font-semibold italic">Crafting designs, stitch by stitch.</span>

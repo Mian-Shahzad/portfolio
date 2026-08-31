@@ -21,7 +21,7 @@ const SkillsPage = () => {
                     {/* Large Avatar Feature */}
                     <div className="mb-10 flex justify-center" data-aos="zoom-in">
                         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden glass-panel border-4 border-primary/30 p-3 shadow-2xl shadow-primary/20 group interactive transition-colors duration-500 hover:border-primary">
-                            <img src="/w.png" alt="Faryad Ali Sketch"
+                            <img src="/faryad-ali.png" alt="Faryad Ali Sketch"
                                 className="w-full h-full object-cover rounded-[50%] bg-white dark:bg-slate-800 transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full pointer-events-none"></div>
                         </div>

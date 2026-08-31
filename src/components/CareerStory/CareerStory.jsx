@@ -1,7 +1,5 @@
 import React, { useState, useRef } from 'react';
-// TODO: replace these two image files with Faryad Ali's own work/floor photos
-import workPhoto1 from '../../assets/pictures/Graduation.jpg';
-import workPhoto2 from '../../assets/pictures/convocation.jpeg';
+import faryadPhoto from '../../assets/pictures/faryad-ali.png';
 
 const CareerStory = () => {
     const [activePhoto, setActivePhoto] = useState(0);
@@ -26,8 +24,7 @@ const CareerStory = () => {
     };
 
     const photos = [
-        { src: workPhoto1, caption: 'On The Floor 🧵', sub: 'Outfitters Pvt Ltd · Lahore' },
-        { src: workPhoto2, caption: 'Design & Sampling 🎨', sub: 'Product Development · 2016–Present' },
+        { src: faryadPhoto, caption: 'Faryad Ali 🧵', sub: 'Deputy Manager Embroidery Digitizer · Outfitters' },
     ];
 
     
@@ -238,6 +235,7 @@ const CareerStory = () => {
 
                         {/* Tabs */}
                         <div className="w-full max-w-sm md:max-w-md">
+                            {photos.length > 1 && (
                             <div className="flex gap-2 mb-3 glass-panel rounded-2xl p-1.5 border" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
                                 {photos.map((p, i) => (
                                     <button
@@ -253,6 +251,7 @@ const CareerStory = () => {
                                     </button>
                                 ))}
                             </div>
+                            )}
 
                             {/* Floating badge */}
                             <div className="absolute -top-4 -right-2 z-20 glass-panel px-3 py-2 rounded-2xl shadow-xl border border-primary/20 flex items-center gap-2 animate-bounce">
