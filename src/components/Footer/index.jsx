@@ -49,7 +49,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-slate-200 dark:border-slate-800/50">
                 <p className="text-sm text-slate-500 font-medium text-center md:text-left">
                     &copy; 2026 Faryad Ali. All Rights Reserved. <br />
-                    <span className="text-xs">Bhobatian, Near 92 News, Raiwind Road, Lahore (0304-4005650)</span>
+                    <span className="text-xs">Bhobatian, Near 92 News, Raiwind Road, Lahore (+92304-4005650)</span>
                 </p>
                 <div className="flex space-x-4">
                     <a href="tel:+923044005650" className="interactive w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-primary hover:text-white transition-all">
