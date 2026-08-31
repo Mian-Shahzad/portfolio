@@ -1,14 +1,14 @@
 import React from 'react';
 
 const techItems = [
-    { icon: "fab fa-react", name: "React.js" },
-    { icon: "fab fa-node-js", name: "Node.js" },
-    { icon: "fab fa-js-square", name: "JavaScript" },
-    { icon: "fas fa-database", name: "SQL / MongoDB" },
-    { icon: "fab fa-html5", name: "HTML5" },
-    { icon: "fab fa-css3-alt", name: "CSS3 / Tailwind" },
-    { icon: "fab fa-git-alt", name: "Git / GitHub" },
-    { icon: "fas fa-rocket", name: "Oracle Apex" },
+    { icon: "fas fa-pen-nib", name: "Wilcom W9 / W10" },
+    { icon: "fas fa-vector-square", name: "Wilcom E2 / E4" },
+    { icon: "fas fa-gem", name: "Dahao / Emcad Beads" },
+    { icon: "fas fa-shirt", name: "Sketch & Logo Punching" },
+    { icon: "fas fa-ruler-combined", name: "Design Grading" },
+    { icon: "fas fa-cogs", name: "Machine Planning" },
+    { icon: "fas fa-file-excel", name: "MS Office & Outlook" },
+    { icon: "fas fa-desktop", name: "Hardware & Software" },
 ];
 
 const TechStack = () => {

@@ -1,25 +1,25 @@
 import React, { useEffect } from 'react';
 
 const galleryImages1 = [
-    "https://picsum.photos/seed/sup1/600/400",
-    "https://picsum.photos/seed/sup2/600/400",
-    "https://picsum.photos/seed/sup3/600/400",
-    "https://picsum.photos/seed/sup4/600/400",
-    "https://picsum.photos/seed/sup5/600/400",
-    "https://picsum.photos/seed/sup6/600/400",
-    "https://picsum.photos/seed/sup7/600/400",
-    "https://picsum.photos/seed/sup8/600/400",
+    "https://picsum.photos/seed/emb1/600/400",
+    "https://picsum.photos/seed/emb2/600/400",
+    "https://picsum.photos/seed/emb3/600/400",
+    "https://picsum.photos/seed/emb4/600/400",
+    "https://picsum.photos/seed/emb5/600/400",
+    "https://picsum.photos/seed/emb6/600/400",
+    "https://picsum.photos/seed/emb7/600/400",
+    "https://picsum.photos/seed/emb8/600/400",
 ];
 
 const galleryImages2 = [
-    "https://picsum.photos/seed/fare1/600/400",
-    "https://picsum.photos/seed/fare2/600/400",
-    "https://picsum.photos/seed/fare3/600/400",
-    "https://picsum.photos/seed/fare4/600/400",
-    "https://picsum.photos/seed/fare5/600/400",
-    "https://picsum.photos/seed/fare6/600/400",
-    "https://picsum.photos/seed/fare7/600/400",
-    "https://picsum.photos/seed/fare8/600/400",
+    "https://picsum.photos/seed/floor1/600/400",
+    "https://picsum.photos/seed/floor2/600/400",
+    "https://picsum.photos/seed/floor3/600/400",
+    "https://picsum.photos/seed/floor4/600/400",
+    "https://picsum.photos/seed/floor5/600/400",
+    "https://picsum.photos/seed/floor6/600/400",
+    "https://picsum.photos/seed/floor7/600/400",
+    "https://picsum.photos/seed/floor8/600/400",
 ];
 
 const GalleryPage = () => {
@@ -36,17 +36,17 @@ const GalleryPage = () => {
             <div className="w-full">
                 <div className="text-center mb-16 px-6" data-aos="fade-up">
                     <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
-                        Our <span className="text-gradient">Gallery</span>
+                        Work <span className="text-gradient">Gallery</span>
                     </h1>
                     <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-                        Capturing unforgettable moments with no boundaries.
+                        A look at embroidery designs, samples and the production floor.
                     </p>
                 </div>
 
-                {/* Superior University Section */}
+                {/* Embroidery Designs Section */}
                 <div className="mb-24 w-full relative">
                     <h2 className="text-4xl md:text-5xl font-bold ml-6 lg:ml-12 mb-8 text-slate-800 dark:text-slate-200">
-                        Superior University
+                        Embroidery Designs
                     </h2>
 
                     <div className="gallery-marquee-container w-full">
@@ -56,7 +56,7 @@ const GalleryPage = () => {
                                 <div key={index} className="gallery-image-wrapper group h-[160px] sm:h-[220px]">
                                     <img
                                         src={src}
-                                        alt={`Superior University ${index}`}
+                                        alt={`Embroidery Design ${index}`}
                                         className="h-full w-auto object-cover"
                                         style={{ minWidth: '220px' }}
                                     />
@@ -66,10 +66,10 @@ const GalleryPage = () => {
                     </div>
                 </div>
 
-                {/* Farewell Section */}
+                {/* Production Floor Section */}
                 <div className="mb-20 w-full relative">
                     <h2 className="text-4xl md:text-5xl font-bold ml-6 lg:ml-12 mb-8 text-slate-800 dark:text-slate-200">
-                        Farewell
+                        Production Floor
                     </h2>
 
                     {/* Reverse animation direction */}
@@ -79,7 +79,7 @@ const GalleryPage = () => {
                                 <div key={index} className="gallery-image-wrapper group h-[160px] sm:h-[220px]">
                                     <img
                                         src={src}
-                                        alt={`Farewell ${index}`}
+                                        alt={`Production Floor ${index}`}
                                         className="h-full w-auto object-cover"
                                         style={{ minWidth: '220px' }}
                                     />

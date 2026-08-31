@@ -5,39 +5,39 @@ import Achievements from './Achievements';
 const educations = [
     {
         id: 1,
-        degree: "BS Computer Science",
-        institution: "Superior University (Gold Campus)",
-        location: "Lahore, Pakistan",
-        date: "2022 - 2025",
-        cgpa: "3.0",
-        type: "primary",
-        icon: "fa-graduation-cap",
-        description: "Engaging in advanced software engineering practices, learning cutting-edge web development, and participating in algorithmic problem-solving to build robust full-stack applications.",
-        courses: ["Data Structures", "Web Development", "Software Engineering", "Database Systems", "Operating Systems"]
+        degree: 'Embroidery Designing',
+        institution: 'Iman Arts Academy',
+        location: 'Lahore, Pakistan',
+        date: '2009',
+        cgpa: null,
+        type: 'primary',
+        icon: 'fa-pen-nib',
+        description: 'Professional training in embroidery designing and digitizing that became the foundation of my career: sketch punching, logo punching, stitch types and preparing production-ready designs.',
+        courses: ['Embroidery Designing', 'Sketch Punching', 'Digitizing Basics', 'Stitch Types']
     },
     {
         id: 2,
-        degree: "Intermediate (ICS)",
-        institution: "Superior College",
-        location: "Lahore, Pakistan",
-        date: "2020 - 2021",
+        degree: 'FA (Arts)',
+        institution: 'Allama Iqbal Open University (AIOU)',
+        location: 'Lahore, Pakistan',
+        date: 'Completed',
         cgpa: null,
-        type: "secondary",
-        icon: "fa-laptop-code",
-        description: "Built a strong foundation in computational thinking, mathematics, and core physics principles, sparking a profound interest in programming and technology.",
-        courses: ["Mathematics", "Physics", "Computer Science"]
+        type: 'secondary',
+        icon: 'fa-book-open',
+        description: 'Completed intermediate education in Arts through AIOU while working full time in the embroidery industry, strengthening my communication and organizational skills.',
+        courses: ['Arts', 'Urdu', 'English']
     },
     {
         id: 3,
-        degree: "Matriculation (CS)",
-        institution: "Govt High School",
-        location: "Lahore, Pakistan",
-        date: "2018 - 2019",
+        degree: 'Matriculation (Science)',
+        institution: 'BISE Lahore',
+        location: 'Lahore, Pakistan',
+        date: 'Completed',
         cgpa: null,
-        type: "slate",
-        icon: "fa-school",
-        description: "Introduced to the basics of computer science and structural programming, participating in various academic challenges that laid the groundwork for my academic focus.",
-        courses: ["Computer Fundamentals", "Programming Basics", "Mathematics"]
+        type: 'slate',
+        icon: 'fa-school',
+        description: 'Completed secondary education with Science from the Board of Intermediate and Secondary Education, Lahore, building the analytical base I use daily in design and machine planning.',
+        courses: ['Mathematics', 'Physics', 'Chemistry', 'Biology']
     }
 ];
 
@@ -51,7 +51,7 @@ const EducationPage = () => {
                             Academic <span className="text-gradient">Background</span>
                         </h1>
                         <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-                            My educational journey, degrees, and the foundational knowledge that drives my career.
+                            My academic and professional training, and the foundation that shaped my career as an embroidery designer.
                         </p>
                     </header>
 
@@ -146,7 +146,7 @@ const EducationPage = () => {
                                             </p>
 
                                             <div>
-                                                <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Key Coursework</p>
+                                                <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Key Subjects</p>
                                                 <div className="flex flex-wrap gap-2 text-sm font-medium">
                                                     {edu.courses.map((course, i) => (
                                                         <span key={i} className={`px-3 py-1.5 rounded-lg border transition-colors duration-300 ${pillTheme}`}>

@@ -4,58 +4,53 @@ import { motion } from 'framer-motion';
 const experiences = [
     {
         id: 1,
-        title: "Associate Software Developer (Full Time)",
-        company: "Wizmen Systems, Lahore",
-        date: "July 2025 – Present",
-        type: "primary",
-        icon: "fa-laptop-code",
-        stack: ["MERN Stack", "Express.js", "Node.js", "SQL DB"],
+        title: 'Deputy Manager Embroidery Digitizer',
+        company: 'Outfitters Pvt Ltd, Lahore (Garments Manufacturing)',
+        date: 'May 2016 – Present',
+        type: 'primary',
+        icon: 'fa-pen-nib',
+        stack: ['Wilcom W9/W10', 'Wilcom E2/E4', 'Dahao / Emcad', 'Laser & Beads', 'Sequence Work'],
         points: [
-            "Implemented activity-tracking mechanisms to analyze 50+ user behavior patterns",
-            "Designed 10+ dashboards and graphs using Oracle Apex queries, reducing data retrieval time by 30%",
-            "Generated 10+ monthly reports utilizing SQL formulas and Bootstrap Tables"
+            'Serving as Team Lead in the Outfitters product development department',
+            'Handle laser work and beads work, and discuss garments according to planning',
+            'Change designs as per fabric width and length, and adjust designs as per costing',
+            'Plan machines with the team: divider work, box cut, frame work and semi stitch',
+            'Grade design sizes according to pattern and edit designs as per required stitch size',
+            'Check and adjust every design so it runs smoothly on the machines',
+            'Set designs according to machine size: 12 inch, 13 inch, 16 inch and 18 inch',
+            'Set sequence work designs in 3mm, 5mm, 7mm and 9mm as per sample',
+            'Research new embroidery techniques and prepare samples',
+            'Prepare all necessary weekly and monthly reports',
+            'Send designs by email to all outsource vendors'
         ]
     },
     {
         id: 2,
-        title: "Graphic Designer (3-Month Contract)",
-        company: "Rafiperr Global Entertainment",
-        date: "Jan 2025 – Feb 2025",
-        type: "secondary",
-        icon: "fa-palette",
-        stack: ["Adobe Photoshop", "Illustrator", "AI Tools"],
+        title: 'Senior Embroidery Digitizer',
+        company: 'Brothers Embroidery Pvt Ltd (Garments Manufacturing)',
+        date: 'Feb 2011 – Apr 2016',
+        type: 'secondary',
+        icon: 'fa-vector-square',
+        stack: ['Sketch Punch', 'Coral File Punch', 'Logo Punching', 'Sampling'],
         points: [
-            "Served as Graphic Designer in Lahore & Cattle Show contract role",
-            "Designed branding materials and social media creatives using AI, Photoshop & Illustrator",
-            "Collaborated with marketing teams to align visuals with brand identity"
+            'Served as Embroidery Digitizer and Programmer',
+            'Sketch punching and Coral file punching for production',
+            'Punched logos of all kinds and prepared sample punches',
+            'Researched new embroidery techniques for the production floor'
         ]
     },
     {
         id: 3,
-        title: "Frontend Developer (Contract Base)",
-        company: "Auraniums, Lahore",
-        date: "June 2024 – September 2024",
-        type: "primary",
-        icon: "fa-code",
-        stack: ["React.js", "CSS", "Bootstrap 5", "JavaScript", "HTML5", "Adobe Photoshop"],
+        title: 'Junior Embroidery Digitizer',
+        company: 'Waheed Embroidery Pvt Ltd (Garments Manufacturing)',
+        date: 'May 2010 – Jan 2011',
+        type: 'primary',
+        icon: 'fa-shirt',
+        stack: ['Sketch Punch', 'Coral File Punch', 'Logo Punching'],
         points: [
-            "Built dynamic and responsive business profiles and client websites",
-            "Delivered 4+ client websites with complete cross-browser compatibility",
-            "Redesigned the company website"
-        ]
-    },
-    {
-        id: 4,
-        title: "MERN Stack Developer Intern (3 Months)",
-        company: "Code Graper's, Lahore",
-        date: "2023",
-        type: "secondary",
-        icon: "fa-server",
-        stack: ["Node.js", "MongoDB", "Express.js", "REST APIs"],
-        points: [
-            "Completed a 3-month intensive MERN stack training internship",
-            "Developed a full-stack To-Do List application using Node.js",
-            "Worked with RESTful APIs, backend routing, and database schema design"
+            'Served as Embroidery Digitizer and Programmer',
+            'Sketch punching and Coral file punching',
+            'Prepared sample punches and punched logos of all kinds'
         ]
     }
 ];
@@ -69,7 +64,7 @@ const ExperiencePage = () => {
                         My <span className="text-gradient">Professional</span> Journey
                     </h1>
                     <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-                        A detailed timeline of my roles, responsibilities, and key achievements throughout my career.
+                        A detailed timeline of my roles, responsibilities, and key achievements across 15+ years in the embroidery and garments industry.
                     </p>
                 </header>
 

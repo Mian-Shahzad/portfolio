@@ -19,13 +19,13 @@ const Experience = () => {
                     <div className="relative pl-8 md:pl-0 w-full md:w-1/2 md:pr-12 md:text-right" data-aos="fade-right">
                         <div className="absolute top-0 left-[-9px] md:left-auto md:right-[-9px] w-4 h-4 rounded-full bg-primary border-4 border-lightBg dark:border-darkBg shadow-[0_0_10px_#0ea5e9]"></div>
                         <div className="glass-panel p-6 rounded-2xl hover:shadow-lg hover:shadow-primary/10 transition-shadow interactive">
-                            <span className="text-sm font-semibold text-primary mb-1 block">July 2025 – Present</span>
-                            <h3 className="text-xl font-bold">Associate Software Developer</h3>
-                            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Wizmen Systems, Lahore</p>
+                            <span className="text-sm font-semibold text-primary mb-1 block">May 2016 – Present</span>
+                            <h3 className="text-xl font-bold">Deputy Manager Embroidery Digitizer</h3>
+                            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Outfitters Pvt Ltd, Lahore</p>
                             <ul className="text-slate-600 dark:text-slate-300 list-disc list-inside text-sm md:text-base space-y-1">
-                                <li>Implemented activity-tracking mechanisms to analyze 50+ user behavior patterns</li>
-                                <li>Designed 10+ dashboards and graphs using Oracle Apex queries, reducing data retrieval time by 30%</li>
-                                <li>Generated 10+ monthly reports utilizing SQL formulas and Bootstrap Tables</li>
+                                <li>Serving as Team Lead in the Outfitters product development department</li>
+                                <li>Handle laser work, beads work, design grading and machine planning</li>
+                                <li>Prepare weekly and monthly reports and send designs to all outsource vendors</li>
                             </ul>
                         </div>
                     </div>
@@ -34,12 +34,12 @@ const Experience = () => {
                     <div className="relative pl-8 md:pl-0 w-full md:w-1/2 md:ml-auto md:pl-12" data-aos="fade-left">
                         <div className="absolute top-0 left-[-9px] md:left-[-9px] w-4 h-4 rounded-full bg-secondary border-4 border-lightBg dark:border-darkBg shadow-[0_0_10px_#a855f7]"></div>
                         <div className="glass-panel p-6 rounded-2xl hover:shadow-lg hover:shadow-secondary/10 transition-shadow interactive">
-                            <span className="text-sm font-semibold text-secondary mb-1 block">Jan 2025 – Feb 2025</span>
-                            <h3 className="text-xl font-bold">Graphic Designer</h3>
-                            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Rafiperr Global Entertainment</p>
+                            <span className="text-sm font-semibold text-secondary mb-1 block">Feb 2011 – Apr 2016</span>
+                            <h3 className="text-xl font-bold">Senior Embroidery Digitizer</h3>
+                            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Brothers Embroidery Pvt Ltd</p>
                             <ul className="text-slate-600 dark:text-slate-300 list-disc list-inside text-sm md:text-base space-y-1">
-                                <li>Designed branding materials and social media creatives using AI, Photoshop & Illustrator</li>
-                                <li>Collaborated with marketing teams to align visuals with brand identity</li>
+                                <li>Sketch punching, Coral file punching and logo punching of all kinds</li>
+                                <li>Prepared sample punches and researched new embroidery techniques</li>
                             </ul>
                         </div>
                     </div>
@@ -48,12 +48,12 @@ const Experience = () => {
                     <div className="relative pl-8 md:pl-0 w-full md:w-1/2 md:pr-12 md:text-right" data-aos="fade-right">
                         <div className="absolute top-0 left-[-9px] md:left-auto md:right-[-9px] w-4 h-4 rounded-full bg-primary border-4 border-lightBg dark:border-darkBg shadow-[0_0_10px_#0ea5e9]"></div>
                         <div className="glass-panel p-6 rounded-2xl hover:shadow-lg hover:shadow-primary/10 transition-shadow interactive">
-                            <span className="text-sm font-semibold text-primary mb-1 block">June 2024 – September 2024</span>
-                            <h3 className="text-xl font-bold">Frontend Developer</h3>
-                            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Auraniums, Lahore</p>
+                            <span className="text-sm font-semibold text-primary mb-1 block">May 2010 – Jan 2011</span>
+                            <h3 className="text-xl font-bold">Junior Embroidery Digitizer</h3>
+                            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Waheed Embroidery Pvt Ltd</p>
                             <ul className="text-slate-600 dark:text-slate-300 list-disc list-inside text-sm md:text-base space-y-1">
-                                <li>Delivered 4+ responsive client websites with cross-browser compatibility</li>
-                                <li>Redesigned the company website, increasing page load speed by 35%</li>
+                                <li>Served as Embroidery Digitizer and Programmer on the production floor</li>
+                                <li>Sketch punch, Coral file punch and sample punch for daily orders</li>
                             </ul>
                         </div>
                     </div>
@@ -62,12 +62,12 @@ const Experience = () => {
                     <div className="relative pl-8 md:pl-0 w-full md:w-1/2 md:ml-auto md:pl-12" data-aos="fade-left">
                         <div className="absolute top-0 left-[-9px] md:left-[-9px] w-4 h-4 rounded-full bg-secondary border-4 border-lightBg dark:border-darkBg shadow-[0_0_10px_#a855f7]"></div>
                         <div className="glass-panel p-6 rounded-2xl hover:shadow-lg hover:shadow-secondary/10 transition-shadow interactive">
-                            <span className="text-sm font-semibold text-secondary mb-1 block">2023</span>
-                            <h3 className="text-xl font-bold">MERN Stack Developer Intern</h3>
-                            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Code Graper's, Lahore</p>
+                            <span className="text-sm font-semibold text-secondary mb-1 block">2009</span>
+                            <h3 className="text-xl font-bold">Embroidery Designing Course</h3>
+                            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">Iman Arts Academy, Lahore</p>
                             <ul className="text-slate-600 dark:text-slate-300 list-disc list-inside text-sm md:text-base space-y-1">
-                                <li>Developed a full-stack To-Do List application using Node.js and MongoDB supporting 100+ concurrent users</li>
-                                <li>Worked with 8+ RESTful APIs, backend routing, and database schema design</li>
+                                <li>Completed professional training in embroidery designing and digitizing</li>
+                                <li>Learned stitch types, punching fundamentals and production-ready design preparation</li>
                             </ul>
                         </div>
                     </div>

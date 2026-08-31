@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
-import graduationPhoto from '../../assets/pictures/Graduation.jpg';
-import convocationPhoto from '../../assets/pictures/convocation.jpeg';
+// TODO: replace these two image files with Faryad Ali's own work/floor photos
+import workPhoto1 from '../../assets/pictures/Graduation.jpg';
+import workPhoto2 from '../../assets/pictures/convocation.jpeg';
 
-const GraduationStory = () => {
+const CareerStory = () => {
     const [activePhoto, setActivePhoto] = useState(0);
     const [dlState, setDlState] = useState('idle'); // 'idle' | 'loading' | 'done'
     const downloadRef = useRef(null);
@@ -25,43 +26,21 @@ const GraduationStory = () => {
     };
 
     const photos = [
-        { src: graduationPhoto, caption: 'Graduation Day 🎓', sub: 'Superior University · 2026' },
-        { src: convocationPhoto, caption: 'Convocation Ceremony 🏛️', sub: 'Amazing Memories · 2022–2026' },
+        { src: workPhoto1, caption: 'On The Floor 🧵', sub: 'Outfitters Pvt Ltd · Lahore' },
+        { src: workPhoto2, caption: 'Design & Sampling 🎨', sub: 'Product Development · 2016–Present' },
     ];
 
-    const fypHighlights = [
-        {
-            icon: 'fa-robot',
-            title: 'YOLO Detection',
-            desc: 'Real-time audience detection using YOLOv8 for accurate demographic recognition.',
-            color: 'text-primary',
-            bg: 'bg-primary/10 border-primary/20',
-        },
-        {
-            icon: 'fa-bullseye',
-            title: 'Smart Ad Targeting',
-            desc: 'Dynamically selects and displays ads based on detected audience gender, age, and count.',
-            color: 'text-secondary',
-            bg: 'bg-secondary/10 border-secondary/20',
-        },
-        {
-            icon: 'fa-display',
-            title: 'Live Display System',
-            desc: 'Full-stack ad management dashboard with real-time display control interface.',
-            color: 'text-emerald-400',
-            bg: 'bg-emerald-400/10 border-emerald-400/20',
-        },
-    ];
+    
 
     const stats = [
-        { icon: 'fa-graduation-cap', value: '2022–26', label: 'Batch Year', color: 'text-primary' },
-        { icon: 'fa-code-branch', value: 'FYP', label: 'Final Year Project', color: 'text-secondary' },
-        { icon: 'fa-brain', value: 'YOLOv8', label: 'AI Model Used', color: 'text-emerald-400' },
-        { icon: 'fa-users', value: '75%', label: 'Memories Made', color: 'text-rose-400' },
+        { icon: 'fa-calendar-alt', value: '2010–26', label: 'Years in Craft', color: 'text-primary' },
+        { icon: 'fa-building', value: '3', label: 'Companies Served', color: 'text-secondary' },
+        { icon: 'fa-pen-nib', value: 'Wilcom', label: 'Primary Software', color: 'text-emerald-400' },
+        { icon: 'fa-users', value: 'Team Lead', label: 'Current Role', color: 'text-rose-400' },
     ];
 
     return (
-        <section id="graduation-story" className="py-28 relative z-10 overflow-hidden">
+        <section id="career-story" className="py-28 relative z-10 overflow-hidden">
 
             {/* Ambient decorative blobs */}
             <div
@@ -94,15 +73,15 @@ const GraduationStory = () => {
                 {/* ── Section Header ── */}
                 <div className="text-center mb-20" data-aos="fade-up">
                     <div className="inline-flex items-center gap-2 py-1.5 px-5 rounded-full glass-panel text-sm font-semibold text-primary mb-5 shadow-lg shadow-primary/20 border border-primary/20">
-                        <i className="fas fa-graduation-cap" />
-                        University Chapter
+                        <i className="fas fa-pen-nib" />
+                        Career Chapter
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight">
-                        Our <span className="text-gradient">University Story</span>
+                        My <span className="text-gradient">Embroidery Journey</span>
                     </h2>
                     <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Four years of growth, friendship, late-night coding sessions, and a Final Year Project
-                        that pushed the boundaries of AI-powered advertising.
+                        Over fifteen years of designing, punching and running embroidery on the production floor —
+                        from a junior digitizer to leading a product development team.
                     </p>
                     <div className="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-6" />
                 </div>
@@ -117,24 +96,24 @@ const GraduationStory = () => {
                         <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border backdrop-blur-sm"
                             style={{ background: 'linear-gradient(135deg, rgba(14,165,233,0.15), rgba(168,85,247,0.15))', borderColor: 'rgba(14,165,233,0.3)' }}>
                             <i className="fas fa-calendar-alt text-primary text-sm" />
-                            <span className="text-sm font-extrabold tracking-widest text-primary uppercase">2022 – 2026 · Superior University</span>
+                            <span className="text-sm font-extrabold tracking-widest text-primary uppercase">2010 – Present · Embroidery Industry</span>
                         </div>
 
                         <h3 className="text-3xl md:text-4xl font-extrabold leading-tight">
-                            Four Unforgettable Years at{' '}
-                            <span className="text-gradient">Superior University</span>
+                            Fifteen Years of Stitches at{' '}
+                            <span className="text-gradient">Lahore’s Embroidery Floors</span>
                         </h3>
 
                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                            From the very first day stepping onto campus to the proud moment of receiving our degrees —
-                            every single semester at <strong className="text-slate-800 dark:text-slate-200">Superior University</strong> was
-                            nothing short of extraordinary. We laughed, we coded, we struggled, and we grew — together.
+                            I started in 2010 as a Junior Embroidery Digitizer at Waheed Embroidery, learning sketch punch and
+                            Coral file punch from the ground up. Today I serve as Deputy Manager Embroidery Digitizer at
+                            <strong className="text-slate-800 dark:text-slate-200"> Outfitters Pvt Ltd</strong>, leading the product development team.
                         </p>
 
                         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Those years were filled with late-night study sessions in the labs, collaborative project sprints,
-                            shared laughs in the cafeteria, and friendships that will last a lifetime. We didn't just earn a degree —
-                            we built a family.
+                            In between came five years at Brothers Embroidery as Senior Digitizer, punching logos of every kind.
+                            Every design I release is checked, graded and set so it runs smoothly on the machine — because on the
+                            production floor, a design is only as good as the stitches it produces.
                         </p>
 
                         {/* Stats Grid */}
@@ -157,15 +136,15 @@ const GraduationStory = () => {
                         {/* Quote */}
                         <blockquote className="border-l-4 border-primary/60 pl-5 italic text-slate-500 dark:text-slate-400 text-base mt-2"
                             style={{ borderImage: 'linear-gradient(to bottom, #0ea5e9, #a855f7) 1' }}>
-                            "The best classroom is the one filled with passionate friends and a shared dream.
-                            Here's to every memory we built together at Superior."
+                            "A good design is not the one that looks best on screen — it is the one that runs clean on the
+                            machine, on every fabric, in every size."
                         </blockquote>
 
                         {/* Hidden real download anchor */}
                         <a
                             ref={downloadRef}
-                            href="/Muhammad_Numan_Saleem_associate_software_develper.pdf"
-                            download="Muhammad_Numan_Saleem_CV.pdf"
+                            href="/Faryad_Ali_CV.pdf"
+                            download="Faryad_Ali_CV.pdf"
                             style={{ display: 'none' }}
                             aria-hidden="true"
                         />
@@ -269,7 +248,7 @@ const GraduationStory = () => {
                                             : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
                                             }`}
                                     >
-                                        <i className={`fas ${i === 0 ? 'fa-graduation-cap' : 'fa-images'} mr-1.5`} />
+                                        <i className={`fas ${i === 0 ? 'fa-industry' : 'fa-images'} mr-1.5`} />
                                         {p.caption.split(' ').slice(0, 2).join(' ')}
                                     </button>
                                 ))}
@@ -277,8 +256,8 @@ const GraduationStory = () => {
 
                             {/* Floating badge */}
                             <div className="absolute -top-4 -right-2 z-20 glass-panel px-3 py-2 rounded-2xl shadow-xl border border-primary/20 flex items-center gap-2 animate-bounce">
-                                <i className="fas fa-graduation-cap text-primary text-base" />
-                                <span className="text-xs font-extrabold">Graduated! 🎓</span>
+                                <i className="fas fa-pen-nib text-primary text-base" />
+                                <span className="text-xs font-extrabold">15+ Years 🧵</span>
                             </div>
 
                             {/* Photo Card */}
@@ -303,7 +282,7 @@ const GraduationStory = () => {
                             {/* Bottom decorative pill */}
                             <div className="absolute -bottom-4 -left-2 z-20 glass-panel px-3 py-2 rounded-2xl shadow-xl border border-secondary/20 flex items-center gap-2">
                                 <i className="fas fa-star text-yellow-400 text-sm" />
-                                <span className="text-xs font-bold text-slate-600 dark:text-slate-300">BS Computer Science</span>
+                                <span className="text-xs font-bold text-slate-600 dark:text-slate-300">Embroidery Designer</span>
                             </div>
                         </div>
                     </div>
@@ -314,4 +293,4 @@ const GraduationStory = () => {
     );
 };
 
-export default GraduationStory;
+export default CareerStory;

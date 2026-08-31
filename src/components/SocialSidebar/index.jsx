@@ -3,27 +3,27 @@ import React from 'react';
 const SocialSidebar = () => {
     return (
         <div className="social-sidebar-container">
-            <div className="social-heading">Social Links</div>
+            <div className="social-heading">Contact Links</div>
 
-            <a href="https://www.instagram.com/numansaleem_/" target="_blank" rel="noopener noreferrer" className="social-float-btn btn-ig group">
+            <a href="https://wa.me/923044005650" target="_blank" rel="noopener noreferrer" className="social-float-btn btn-wa group">
                 <div className="social-icon-wrapper">
-                    <i className="fab fa-instagram"></i>
+                    <i className="fab fa-whatsapp"></i>
                 </div>
-                <span className="social-text">Connect on Instagram</span>
+                <span className="social-text">Chat on WhatsApp</span>
             </a>
 
-            <a href="https://www.facebook.com/numan.saleem.714842/" target="_blank" rel="noopener noreferrer" className="social-float-btn btn-fb group">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Faryad228@gmail.com" target="_blank" rel="noopener noreferrer" className="social-float-btn btn-mail group">
                 <div className="social-icon-wrapper">
-                    <i className="fab fa-facebook-f"></i>
+                    <i className="fas fa-envelope"></i>
                 </div>
-                <span className="social-text">Connect on Facebook</span>
+                <span className="social-text">Send an Email</span>
             </a>
 
-            <a href="https://www.linkedin.com/in/numan-saleem-4401b9289/" target="_blank" rel="noopener noreferrer" className="social-float-btn btn-li group">
+            <a href="tel:+923044005650" className="social-float-btn btn-call group">
                 <div className="social-icon-wrapper">
-                    <i className="fab fa-linkedin-in"></i>
+                    <i className="fas fa-phone"></i>
                 </div>
-                <span className="social-text">Connect on LinkedIn</span>
+                <span className="social-text">Call 0304-4005650</span>
             </a>
         </div>
     );

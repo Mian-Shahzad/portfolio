@@ -14,7 +14,7 @@ import AmbientBackground from './components/AmbientBackground';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Achievements from './components/Achievements';
-import GraduationStory from './components/GraduationStory/GraduationStory';
+import CareerStory from './components/CareerStory/CareerStory';
 import SkillsPage from './components/SkillsPage';
 import ExperiencePage from './components/ExperiencePage';
 import ProjectsPage from './components/ProjectsPage';
@@ -28,7 +28,7 @@ const HomePage = () => (
   <>
     <Hero />
     <Skills />
-    <GraduationStory />
+    <CareerStory />
     <Achievements />
   </>
 );

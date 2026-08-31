@@ -8,116 +8,59 @@ import './ProjectsPage.css';
 const myProjects = [
     {
         id: 1,
-        title: "Chrome Extensions",
-        tag: "V3 Extension",
-        year: "2024",
-        desc: "Developed production-ready extensions: Daily Expense Manager for financial tracking and Font Changer for dynamic webpage font customization.",
-        tech: ["Chrome API", "JavaScript", "HTML/CSS"],
-        type: "secondary",
-        link: "#",
-        github: "#"
+        title: 'Laser & Beads Work',
+        tag: 'Outfitters',
+        year: '2016 – Present',
+        desc: 'Handling laser work and beads work for garment production, discussing every garment according to the planning sheet and taking it from sample to bulk output.',
+        tech: ['Laser Work', 'Beads Work', 'Dahao / Emcad', 'Production Planning'],
+        type: 'primary'
     },
     {
         id: 2,
-        title: "Hospital Management System",
-        tag: "Full Stack",
-        year: "2024",
-        desc: "A comprehensive web-based management solution for healthcare providers. Developed modules for real-time patient registration, doctor scheduling, and automated billing using SQL and modern JavaScript.",
-        tech: ["JavaScript", "SQL Database", "Admin Dashboard", "Node.js"],
-        type: "primary",
-        link: "#",
-        github: "#"
+        title: 'Design Grading & Sizing',
+        tag: 'Digitizing',
+        year: '2016 – Present',
+        desc: 'Grading design sizes according to pattern and editing designs as per required stitch size, so the same artwork sits correctly on every size in the size set.',
+        tech: ['Wilcom E2/E4', 'Size Grading', 'Stitch Editing', 'Pattern Matching'],
+        type: 'secondary'
     },
     {
         id: 3,
-        title: "Digital Khata",
-        tag: "Finance",
-        year: "2024",
-        desc: "A specialized high-performance Accounting System for managing daily 'Leen Deen' (Debit/Credit) transactions. Features automated balancing, secure user management with SQL/XAMPP, and one-click printable invoices.",
-        tech: ["React.js", "SQL/XAMPP", "Financial Log", "Print API"],
-        type: "secondary",
-        link: "#",
-        github: "#"
+        title: 'Machine Planning & Setting',
+        tag: 'Production',
+        year: '2016 – Present',
+        desc: 'Planning machines with the team — divider work, box cut, frame work and semi stitch — and setting designs for 12, 13, 16 and 18 inch machine sizes so every file runs smoothly.',
+        tech: ['Machine Setting', 'Divider Work', 'Box Cut', 'Frame Work'],
+        type: 'primary'
     },
     {
         id: 4,
-        title: "Auraniums Portfolio Redesign",
-        tag: "Frontend",
-        year: "2024",
-        desc: "Redesigned the company website for Auraniums, focusing on modern aesthetics and performance, increasing page load speed by 35%.",
-        tech: ["React.js", "Tailwind CSS", "Framer Motion"],
-        type: "primary",
-        link: "#",
-        github: "#"
+        title: 'Sequence Work Setting',
+        tag: 'Technique',
+        year: '2016 – Present',
+        desc: 'Setting sequence work designs in 3mm, 5mm, 7mm and 9mm exactly as per the approved sample, and researching new embroidery techniques to take fresh samples.',
+        tech: ['3mm / 5mm', '7mm / 9mm', 'Sampling', 'R&D'],
+        type: 'secondary'
     },
     {
         id: 5,
-        title: "Wizmen Reporting Dashboard",
-        tag: "Enterprise",
-        year: "2025",
-        desc: "Designed 10+ dashboards and graphs using Oracle Apex queries. Generates monthly reports utilizing SQL formulas and Bootstrap Tables.",
-        tech: ["Oracle Apex", "SQL", "Bootstrap"],
-        type: "secondary",
-        link: "#",
-        github: "#"
+        title: 'Logo & Sketch Punching',
+        tag: 'Brothers Embroidery',
+        year: '2011 – 2016',
+        desc: 'Punched logos of all kinds along with sketch punching and Coral file punching, preparing sample punches for buyers and researching new embroidery techniques.',
+        tech: ['Sketch Punch', 'Coral File Punch', 'Logo Punching', 'Sample Punch'],
+        type: 'primary'
     },
     {
         id: 6,
-        title: "MERN To-Do App",
-        tag: "Full Stack",
-        year: "2023",
-        desc: "Developed a full-stack To-Do List application supporting 100+ concurrent users with JWT authentication and RESTful APIs.",
-        tech: ["MongoDB", "Express", "React", "Node.js"],
-        type: "primary",
-        link: "#",
-        github: "#"
+        title: 'Vendor Design Coordination',
+        tag: 'Team Lead',
+        year: '2016 – Present',
+        desc: 'Sending approved designs by email to all outsource vendors and preparing the weekly and monthly reports for the product development department.',
+        tech: ['Outlook', 'MS Excel', 'Vendor Management', 'Reporting'],
+        type: 'secondary'
     }
 ];
-
-const floatingLogos = [
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-];
-
-const FloatingLogos = ({ numProjects }) => {
-    const logosData = React.useMemo(() => {
-        // Create 12 random logos spread along the track
-        return Array.from({ length: 12 }).map((_, i) => ({
-            id: i,
-            src: floatingLogos[i % floatingLogos.length],
-            position: [
-                (Math.random() - 0.5) * 35, // Spread wide on X axis
-                (Math.random() * 15) - 3,   // Float between -3 and 12 on Y axis
-                -(Math.random() * (numProjects * 20 + 20)) // Spread depth based on projects
-            ],
-            scale: Math.random() * 0.2 + 0.25, // Randomize size to be small and minor
-        }));
-    }, [numProjects]);
-
-    return (
-        <>
-            {logosData.map((data) => (
-                <Float key={`logo-${data.id}`} floatIntensity={2} speed={1.5} rotationIntensity={1.5}>
-                    <group position={data.position}>
-                        {/* Using Html to display SVGs perfectly in 3D */}
-                        <Html transform center distanceFactor={15} zIndexRange={[100, 0]}>
-                            <img
-                                src={data.src}
-                                alt="tech-logo"
-                                style={{ width: `${data.scale * 80}px`, height: `${data.scale * 80}px` }}
-                                className="drop-shadow-[0_0_8px_rgba(255,255,255,0.2)] opacity-40 pointer-events-none"
-                            />
-                        </Html>
-                    </group>
-                </Float>
-            ))}
-        </>
-    );
-};
 
 const ProjectCard = ({ project, index }) => {
     // Alternating left/right offset 
@@ -173,12 +116,12 @@ const ProjectCard = ({ project, index }) => {
                         </div>
 
                         <div className={`flex gap-6 pt-4 border-t border-slate-600/50 relative z-10 ${justifyClass}`}>
-                            <a href={project.github} className={`text-slate-300 hover:text-primary transition-colors font-semibold text-sm flex items-center gap-2 cursor-pointer ${flexRowClass}`}>
-                                <i className="fab fa-github text-xl"></i> Source
-                            </a>
-                            <a href={project.link} className={`text-slate-300 hover:text-secondary transition-colors font-semibold text-sm flex items-center gap-2 cursor-pointer ${flexRowClass}`}>
-                                <i className="fas fa-external-link-alt text-lg"></i> Live
-                            </a>
+                            <span className={`text-slate-300 font-semibold text-sm flex items-center gap-2 ${flexRowClass}`}>
+                                <i className="fas fa-building text-lg text-primary"></i> {project.tag}
+                            </span>
+                            <span className={`text-slate-300 font-semibold text-sm flex items-center gap-2 ${flexRowClass}`}>
+                                <i className="far fa-calendar-alt text-lg text-secondary"></i> {project.year}
+                            </span>
                         </div>
                     </div>
                 </Html>
@@ -233,9 +176,6 @@ const Scene = ({ scrollProgress }) => {
                 </mesh>
             </group>
 
-            {/* Display our floating tech logos */}
-            <FloatingLogos numProjects={myProjects.length} />
-
             {/* Portal at the very end */}
             <Float floatIntensity={1} speed={1}>
                 <mesh position={[0, 5, -(myProjects.length * 20 + 15)]}>
@@ -272,7 +212,7 @@ const ProjectsPage = () => {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="project-3d-title font-extrabold leading-tight mb-4 text-white drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]"
                         >
-                            Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary filter drop-shadow-[0_0_10px_rgba(56,189,248,0.8)]">Journey</span>
+                            Craft <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary filter drop-shadow-[0_0_10px_rgba(56,189,248,0.8)]">Journey</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0 }}
@@ -280,7 +220,7 @@ const ProjectsPage = () => {
                             transition={{ duration: 1, delay: 0.5 }}
                             className="project-3d-desc text-slate-300 max-w-2xl mx-auto drop-shadow-md"
                         >
-                            Scroll down to travel through a dimension of my finest creations.
+                            Scroll down to travel through the embroidery work I have delivered on the production floor.
                         </motion.p>
                     </div>
 
@@ -317,10 +257,10 @@ const ProjectsPage = () => {
             <div className="projects-mobile-container pt-32 pb-24 px-6 min-h-screen">
                 <header className="text-center mb-16" data-aos="fade-down">
                     <h1 className="project-mobile-title font-extrabold leading-tight mb-4 text-slate-900 dark:text-white">
-                        Project <span className="text-gradient">Journey</span>
+                        Craft <span className="text-gradient">Journey</span>
                     </h1>
                     <p className="text-sm text-slate-500 dark:text-slate-400">
-                        Scroll down to travel through my finest creations.
+                        Scroll down to explore my embroidery work highlights.
                     </p>
                 </header>
                 <div className="space-y-8 flex flex-col items-center">
@@ -351,12 +291,12 @@ const ProjectsPage = () => {
                             </div>
 
                             <div className="flex gap-4 pt-4 border-t border-slate-200 dark:border-slate-600/50 relative z-10 justify-start">
-                                <a href={project.github} className="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors font-semibold text-xs flex items-center gap-1">
-                                    <i className="fab fa-github text-lg"></i> Source
-                                </a>
-                                <a href={project.link} className="text-slate-600 dark:text-slate-300 hover:text-secondary transition-colors font-semibold text-xs flex items-center gap-1">
-                                    <i className="fas fa-external-link-alt text-base"></i> Live
-                                </a>
+                                <span className="text-slate-600 dark:text-slate-300 font-semibold text-xs flex items-center gap-1">
+                                    <i className="fas fa-building text-base text-primary"></i> {project.tag}
+                                </span>
+                                <span className="text-slate-600 dark:text-slate-300 font-semibold text-xs flex items-center gap-1">
+                                    <i className="far fa-calendar-alt text-base text-secondary"></i> {project.year}
+                                </span>
                             </div>
                         </div>
                     ))}

@@ -10,7 +10,7 @@ const Skills = () => {
                     </h2>
                     <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-8"></div>
                     <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-                        I offer a diverse set of services bridging the gap between technical execution and visual aesthetics. From full-stack web architectures to creative graphic design and efficient office management.
+                        I bring together design sense, machine knowledge and production discipline. From punching and digitizing artwork in Wilcom to planning embroidery machines on the floor and leading a product development team.
                     </p>
                 </div>
 
@@ -20,21 +20,21 @@ const Skills = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="flex flex-col items-center gap-4">
                             <div className="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center text-3xl text-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-                                <i className="fas fa-code"></i>
+                                <i className="fas fa-pen-nib"></i>
                             </div>
-                            <h3 className="font-bold text-lg">Web Dev</h3>
+                            <h3 className="font-bold text-lg">Embroidery Digitizing</h3>
                         </div>
                         <div className="flex flex-col items-center gap-4">
                             <div className="w-16 h-16 rounded-full bg-orange-500/20 flex items-center justify-center text-3xl text-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.3)]">
-                                <i className="fas fa-paint-brush"></i>
+                                <i className="fas fa-shirt"></i>
                             </div>
-                            <h3 className="font-bold text-lg">Graphic Design</h3>
+                            <h3 className="font-bold text-lg">Design &amp; Sampling</h3>
                         </div>
                         <div className="flex flex-col items-center gap-4">
                             <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center text-3xl text-green-500 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
-                                <i className="fas fa-briefcase"></i>
+                                <i className="fas fa-users-cog"></i>
                             </div>
-                            <h3 className="font-bold text-lg">Management</h3>
+                            <h3 className="font-bold text-lg">Team &amp; Production Lead</h3>
                         </div>
                     </div>
                 </div>
