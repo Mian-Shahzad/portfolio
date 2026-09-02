@@ -97,7 +97,7 @@ const CareerStory = () => {
                         </div>
 
                         <h3 className="text-3xl md:text-4xl font-extrabold leading-tight">
-                            Fifteen Years of Stitches at{' '}
+                            Fifteen Years of Embroidery Digitizer at{' '}
                             <span className="text-gradient">Lahore’s Embroidery Floors</span>
                         </h3>
 
